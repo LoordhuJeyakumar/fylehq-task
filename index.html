@@ -94,8 +94,16 @@
               Pellentesque vitae ante at elit fringilla ac at purus, Morbi sed
               lacus nec risus finibus feugiat et fermentum
             </p>
-
-            <button class="btn btn-primary" type="button">Contact us</button>
+            <!-- Button trigger modal -->
+            <button
+              type="button"
+              data-bs-toggle="modal"
+              data-bs-target="#contactModal"
+              class="btn"
+              type="button"
+            >
+              Contact us
+            </button>
           </div>
           <div
             class="hero-img col-md-3 my-md-auto text-center h-100 d-none d-md-block"
@@ -107,6 +115,158 @@
             />
           </div>
         </div>
+        <div>
+          <!-- Modal -->
+          <div
+            class="modal fade contact-us"
+            id="contactModal"
+            tabindex="-1"
+            aria-labelledby="contactModalLable"
+            aria-hidden="true"
+            data-bs-backdrop="static"
+          >
+            <div class="modal-dialog modal-dialog-centered">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title fw-semibold" id="contactModalLable">
+                    Talk to us
+                  </h5>
+                  <button
+                    type="button"
+                    class="btn-close"
+                    data-bs-dismiss="modal"
+                    aria-label="Close"
+                  ></button>
+                </div>
+                <div class="modal-body">
+                  <form
+                  onsubmit="handleFormSubmit(event)"
+                    class="row g-3 needs-validation contact-us-form"
+                    novalidate
+                    id="cantact-us-form"
+                    
+                  >
+                    <div class="col-md-12">
+                 
+                        <div class="form-floating mb-3">
+                          <input
+                            type="email"
+                            name="workEmail"
+                            required
+                            class="form-control fw-medium"
+                            id="workEmail"
+                            placeholder="name@example.com"
+                          />
+                          <label for="workEmail"
+                            >Work email <span style="color: red">*</span></label
+                          >
+                          <div class="valid-feedback">Looks good!</div>
+                        <div class="invalid-feedback">
+                          Please enter valid email.
+                        </div>
+                        </div>
+                        
+                  
+                    </div>
+                    <div class="col-md-6">
+                 
+                        <div class="form-floating mb-3">
+                          <input
+                            type="text"
+                            name="firstName"
+                            required
+                            class="form-control fw-medium"
+                            id="firstName"
+                            placeholder="John"
+                          />
+                          <label for="firstName"
+                            >First name <span style="color: red">*</span></label
+                          >
+                          <div class="valid-feedback">Looks good!</div>
+                          <div class="invalid-feedback">
+                            Please enter first name.
+                          </div>
+                        </div>
+                       
+                    
+                    </div>
+
+                    <div class="col-md-6">
+               
+                        <div class="form-floating mb-3">
+                          <input
+                            type="text"
+                            name="lastName"
+                            required
+                            class="form-control fw-medium"
+                            id="lastName"
+                            placeholder="Deo"
+                          />
+                          <label for="lastName"
+                            >Last name <span style="color: red">*</span></label
+                          >
+                          <div class="valid-feedback">Looks good!</div>
+                        <div class="invalid-feedback">
+                          Please enter last name.
+                        </div>
+                        </div>
+                        
+                    
+                    </div>
+                    <div class="col-12">
+                      <div class="form-check">
+                        <input
+                          class="form-check-input"
+                          type="checkbox"
+                          value=""
+                          id="isAgree"
+                          required
+                        />
+                        <label class="form-check-label" for="isAgree">
+                          I agree to Fyle's terms and conditions, and provide
+                          consent to send me communication.
+                        </label>
+                        <div class="invalid-feedback">
+                          You must agree before submitting.
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-12">
+                      <button
+                        class="btn contact-us-btn fw-semibold d-flex justify-content-center align-items-center"
+                        type="submit"
+                      >
+                        Contact Us &nbsp;<div id="contact-spinner" class="spinner-border spinner-border-sm d-none" role="status" style="font-size: 10px; ">
+                          <span class="visually-hidden">Loading...</span>
+                        </div>
+                      </button>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Bootstrap Toast -->
+<div class="toast-container position-fixed bottom-0 end-0 p-3">
+  <div id="successToast" class="toast text-bg-success" role="alert" aria-live="assertive" aria-atomic="true">
+    <div class="toast-header">
+      <strong class="me-auto">Success</strong>
+      <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+    </div>
+    <div class="toast-body">
+      <!-- Message will be inserted here dynamically -->
+    </div>
+  </div>
+  <div id="errorToast" class="toast align-items-center text-bg-danger border-0" role="alert" aria-live="assertive" aria-atomic="true">
+    <div class="d-flex">
+      <div class="toast-body">
+       <!-- Message will be inserted here dynamically -->
+      </div>
+      <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
+    </div>
+  </div>
+</div>
       </section>
     </header>
 
@@ -403,7 +563,7 @@
           </div>
         </div>
         <div class="row w-100 justify-content-center our-project">
-          <div class="col-5 content-img">
+          <div class="col-6 content-img">
             <img src="./assets//images/image.png" alt="" />
           </div>
           <div class="col-3">
@@ -411,7 +571,7 @@
               <li class="nav-item">
                 <a class="nav-link active" aria-current="page" href="#">
                   <div class="card">
-                    <h6>Genderless Kei – Japan’s Hot</h6>
+                    <h6 class="fw-semibold">Genderless Kei – Japan’s Hot</h6>
                     <p>
                       Set to launch on the manufacturer’s new A330neo aircraft
                       in 2017, it’s offering lots of
@@ -420,7 +580,26 @@
                 </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Link</a>
+                <a class="nav-link" aria-current="page" href="#">
+                  <div class="card">
+                    <h6 class="fw-semibold">Better Strategy & Quality</h6>
+                    <p>
+                      Set to launch on the manufacturer’s new A330neo aircraft
+                      in 2017, it’s offering lots of
+                    </p>
+                  </div>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="#">
+                  <div class="card">
+                    <h6 class="fw-semibold">Genderless Kei – Japan’s Hot</h6>
+                    <p>
+                      Set to launch on the manufacturer’s new A330neo aircraft
+                      in 2017, it’s offering lots of
+                    </p>
+                  </div>
+                </a>
               </li>
             </ul>
           </div>
