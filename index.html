@@ -39,7 +39,7 @@
     <title>Document</title>
   </head>
   <body>
-    <header class="">
+    <header class="header">
       <!-- Navbar -->
       <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top row">
         <div class="container-fluid w-75 p-2">
@@ -75,7 +75,10 @@
                 <a class="nav-link" href="#what-we-do">What we do</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#why-choose-us">why choose us</a>
+                <a class="nav-link" href="#why-choose-us">Our Projects</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#growth-feedback">Growth</a>
               </li>
             </ul>
           </div>
@@ -140,78 +143,68 @@
                 </div>
                 <div class="modal-body">
                   <form
-                  onsubmit="handleFormSubmit(event)"
+                    onsubmit="handleFormSubmit(event)"
                     class="row g-3 needs-validation contact-us-form"
                     novalidate
                     id="cantact-us-form"
-                    
                   >
                     <div class="col-md-12">
-                 
-                        <div class="form-floating mb-3">
-                          <input
-                            type="email"
-                            name="workEmail"
-                            required
-                            class="form-control fw-medium"
-                            id="workEmail"
-                            placeholder="name@example.com"
-                          />
-                          <label for="workEmail"
-                            >Work email <span style="color: red">*</span></label
-                          >
-                          <div class="valid-feedback">Looks good!</div>
+                      <div class="form-floating mb-3">
+                        <input
+                          type="email"
+                          name="workEmail"
+                          required
+                          class="form-control fw-medium"
+                          id="workEmail"
+                          placeholder="name@example.com"
+                        />
+                        <label for="workEmail"
+                          >Work email <span style="color: red">*</span></label
+                        >
+                        <div class="valid-feedback">Looks good!</div>
                         <div class="invalid-feedback">
                           Please enter valid email.
                         </div>
-                        </div>
-                        
-                  
+                      </div>
                     </div>
                     <div class="col-md-6">
-                 
-                        <div class="form-floating mb-3">
-                          <input
-                            type="text"
-                            name="firstName"
-                            required
-                            class="form-control fw-medium"
-                            id="firstName"
-                            placeholder="John"
-                          />
-                          <label for="firstName"
-                            >First name <span style="color: red">*</span></label
-                          >
-                          <div class="valid-feedback">Looks good!</div>
-                          <div class="invalid-feedback">
-                            Please enter first name.
-                          </div>
+                      <div class="form-floating mb-3">
+                        <input
+                          type="text"
+                          name="firstName"
+                          required
+                          class="form-control fw-medium"
+                          id="firstName"
+                          placeholder="John"
+                        />
+                        <label for="firstName"
+                          >First name <span style="color: red">*</span></label
+                        >
+                        <div class="valid-feedback">Looks good!</div>
+                        <div class="invalid-feedback">
+                          Please enter first name.
                         </div>
-                       
-                    
+                      </div>
                     </div>
 
                     <div class="col-md-6">
-               
-                        <div class="form-floating mb-3">
-                          <input
-                            type="text"
-                            name="lastName"
-                            required
-                            class="form-control fw-medium"
-                            id="lastName"
-                            placeholder="Deo"
-                          />
-                          <label for="lastName"
-                            >Last name <span style="color: red">*</span></label
-                          >
-                          <div class="valid-feedback">Looks good!</div>
+                      <div class="form-floating mb-3">
+                        <input
+                          type="text"
+                          name="lastName"
+                          required
+                          class="form-control fw-medium"
+                          id="lastName"
+                          placeholder="Deo"
+                        />
+                        <label for="lastName"
+                          >Last name <span style="color: red">*</span></label
+                        >
+                        <div class="valid-feedback">Looks good!</div>
                         <div class="invalid-feedback">
                           Please enter last name.
                         </div>
-                        </div>
-                        
-                    
+                      </div>
                     </div>
                     <div class="col-12">
                       <div class="form-check">
@@ -236,7 +229,13 @@
                         class="btn contact-us-btn fw-semibold d-flex justify-content-center align-items-center"
                         type="submit"
                       >
-                        Contact Us &nbsp;<div id="contact-spinner" class="spinner-border spinner-border-sm d-none" role="status" style="font-size: 10px; ">
+                        Contact Us &nbsp;
+                        <div
+                          id="contact-spinner"
+                          class="spinner-border spinner-border-sm d-none"
+                          role="status"
+                          style="font-size: 10px"
+                        >
                           <span class="visually-hidden">Loading...</span>
                         </div>
                       </button>
@@ -248,25 +247,47 @@
           </div>
         </div>
         <!-- Bootstrap Toast -->
-<div class="toast-container position-fixed bottom-0 end-0 p-3">
-  <div id="successToast" class="toast text-bg-success" role="alert" aria-live="assertive" aria-atomic="true">
-    <div class="toast-header">
-      <strong class="me-auto">Success</strong>
-      <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
-    </div>
-    <div class="toast-body">
-      <!-- Message will be inserted here dynamically -->
-    </div>
-  </div>
-  <div id="errorToast" class="toast align-items-center text-bg-danger border-0" role="alert" aria-live="assertive" aria-atomic="true">
-    <div class="d-flex">
-      <div class="toast-body">
-       <!-- Message will be inserted here dynamically -->
-      </div>
-      <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
-    </div>
-  </div>
-</div>
+        <div class="toast-container position-fixed bottom-0 end-0 p-3">
+          <div
+            id="successToast"
+            class="toast text-bg-success"
+            role="alert"
+            aria-live="assertive"
+            aria-atomic="true"
+          >
+            <div class="toast-header">
+              <strong class="me-auto">Success</strong>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="toast"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="toast-body">
+              <!-- Message will be inserted here dynamically -->
+            </div>
+          </div>
+          <div
+            id="errorToast"
+            class="toast align-items-center text-bg-danger border-0"
+            role="alert"
+            aria-live="assertive"
+            aria-atomic="true"
+          >
+            <div class="d-flex">
+              <div class="toast-body">
+                <!-- Message will be inserted here dynamically -->
+              </div>
+              <button
+                type="button"
+                class="btn-close btn-close-white me-2 m-auto"
+                data-bs-dismiss="toast"
+                aria-label="Close"
+              ></button>
+            </div>
+          </div>
+        </div>
       </section>
     </header>
 
@@ -478,7 +499,7 @@
         </div>
       </div>
     </section>
-    <section class="why-choose-us w-100 mt-5 vh-100" id="why-choose-us">
+    <section class="why-choose-us w-100 mt-5 h-100" id="why-choose-us">
       <div class="d-flex justify-content-center align-items-center flex-column">
         <div class="row justify-content-center">
           <div>
@@ -562,14 +583,58 @@
             <h2 class="text-uppercase heading-main m-0">Why We Are Best</h2>
           </div>
         </div>
-        <div class="row w-100 justify-content-center our-project">
-          <div class="col-6 content-img">
-            <img src="./assets//images/image.png" alt="" />
+        <div class="row w-100 justify-content-center our-project h-100">
+          <div class="col-6 content-img h-100">
+            <div class="tab-content h-100" id="project-content">
+              <div
+                class="tab-pane fade show active"
+                id="project-01"
+                role="tabpanel"
+                aria-labelledby="project-01-tab"
+                tabindex="0"
+              >
+                <img  src="./assets//images/image.png" alt="" />
+              </div>
+              <div
+                class="tab-pane fade  "
+                id="project-02"
+                role="tabpanel"
+                aria-labelledby="project-02-tab"
+                tabindex="0"
+              >
+                <img src="./assets//images/image-1.jpg" alt="" />
+              </div>
+              <div
+                class="tab-pane fade  "
+                id="project-03"
+                role="tabpanel"
+                aria-labelledby="project-03-tab"
+                tabindex="0"
+              >
+                <img src="./assets//images/image-2.jpg" alt="" />
+              </div>
+            </div>
           </div>
-          <div class="col-3">
-            <ul class="nav nav-tabs d-flex flex-column">
+          <div class="col-3 h-100">
+            <ul
+              class="nav nav-tabs d-flex flex-column"
+              id="project-content"
+              role="tablist"
+              aria-orientation="vertical"
+            >
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">
+                <button
+                  class="nav-link active"
+                  id="project-01-tab"
+                  data-bs-toggle="pill"
+                  data-bs-target="#project-01"
+                  type="button"
+                  role="tab"
+                  aria-controls="project-01"
+                  aria-selected="true"
+                  aria-current="page"
+                  
+                >
                   <div class="card">
                     <h6 class="fw-semibold">Genderless Kei – Japan’s Hot</h6>
                     <p>
@@ -577,10 +642,19 @@
                       in 2017, it’s offering lots of
                     </p>
                   </div>
-                </a>
+                </button>
               </li>
               <li class="nav-item">
-                <a class="nav-link" aria-current="page" href="#">
+                <button  class="nav-link "
+                id="project-02-tab"
+                data-bs-toggle="pill"
+                data-bs-target="#project-02"
+                type="button"
+                role="tab"
+                aria-controls="project-02"
+                aria-selected="true"
+                aria-current="page"
+               >
                   <div class="card">
                     <h6 class="fw-semibold">Better Strategy & Quality</h6>
                     <p>
@@ -588,10 +662,19 @@
                       in 2017, it’s offering lots of
                     </p>
                   </div>
-                </a>
+                </button>
               </li>
               <li class="nav-item">
-                <a class="nav-link" aria-current="page" href="#">
+                <button  class="nav-link "
+                id="project-03-tab"
+                data-bs-toggle="pill"
+                data-bs-target="#project-03"
+                type="button"
+                role="tab"
+                aria-controls="project-03"
+                aria-selected="true"
+                aria-current="page"
+               >
                   <div class="card">
                     <h6 class="fw-semibold">Genderless Kei – Japan’s Hot</h6>
                     <p>
@@ -599,7 +682,7 @@
                       in 2017, it’s offering lots of
                     </p>
                   </div>
-                </a>
+                </button>
               </li>
             </ul>
           </div>
@@ -607,7 +690,74 @@
       </div>
       <div></div>
     </section>
+    
+    <section class="growth-feedback w-100 mt-5 h-100" id="growth-feedback">
+      <div>
+        <div class="row justify-content-center">
+          <div>
+            <h6 class="text-center heading text-uppercase">Experts growths</h6>
+          </div>
+          <div class="text-center p-3">
+            <h2 class="text-uppercase heading-main m-0">Our Company Growth</h2>
+          </div>
+        </div>
+        <div class="d-flex justify-content-center gap-4">
+          <div class="card growth-card p-4 justify-content-center d-flex text-center gap-2">
+            <div><img src="./assets/icons/heart.svg" alt="" class=""></div>
+            <h3 class="number">199 +</h3>
+            <p class="text">Staticfied Customers</p>
+          </div>
+          <div class="card growth-card p-4 justify-content-center d-flex text-center gap-2">
+            <div><img src="./assets/icons/clock.svg" alt="" class=""></div>
+            <h3 class="number">1591 +</h3>
+            <p class="text">Days Of Operation</p>
+          </div>
+          <div class="card growth-card p-4 justify-content-center d-flex text-center gap-2">
+            <div><img src="./assets/icons/Path4402.svg" alt="" class=""></div>
+            <h3 class="number">283 +</h3>
+            <p class="text">Complete Project</p>
+          </div>
+          <div class="card growth-card p-4 justify-content-center d-flex text-center gap-2">
+            <div><img src="./assets/icons/Path4406.svg" alt="" class=""></div>
+            <h3 class="number">75 +</h3>
+            <p class="text">Win Awards</p>
+          </div>
+          
+        </div>
+      </div>
+    </section>
+    <section class="client-feedback w-100 mt-5 h-100" id="growth-feedback">
+      <div>
+        <div class="row justify-content-center">
+          <div>
+            <h6 class="text-center heading text-uppercase">client's feedback</h6>
+          </div>
+          <div class="text-center p-3">
+            <h2 class="text-uppercase heading-main m-0">people say's about us !</h2>
+          </div>
+        </div>
+       <div
+       class="feedback container">
+        <div class="feedback-box p-4">
+          <div class="content p-4 mx-3">
+            <p class="content-text">Jannat Tumpa The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections Bonorum et Malorum original.
+              <img class="quotemarks" src="./assets/icons/Quotemarks-left.svg" alt="Quotemarks">
+            </p>
+          <span class="name">JANNAT TUMPA</span><span class="des">- COO, AMERIMAR ENTERPRISES, INC.</span>
+          </div>
+        </div>
+      </div>
+      </div>
+    </section>
 
+    <footer>
+      <div class="footer ">
+      <div class="">
+        <img class="footer-img" src="./assets/images/Group.png" alt="footer-img">
+      </div>
+       
+      </div>
+    </footer>
     <script src="js/script.js"></script>
     <script src="./js/carousel.js"></script>
     <!-- <script src="./js/test.js"></script> -->

@@ -11,6 +11,9 @@
   font-family: "Poppins", sans-serif;
   box-sizing: border-box;
 }
+.header .navbar{
+  position: fixed;
+}
 .home-hero {
   scroll-margin-top: 4rem;
 }
@@ -58,13 +61,16 @@
   object-fit: cover;
 }
 
-.what-we-do {
+.what-we-do,
+.growth-feedback {
   background-color: #fafafa;
 
   scroll-margin-top: 4.5rem;
 }
 .what-we-do .heading,
-.why-choose-us .heading {
+.why-choose-us .heading,
+.growth-feedback .heading,
+.client-feedback .heading {
   color: var(--red);
 
   font-weight: 600;
@@ -196,12 +202,15 @@
   }
 }
 
-#why-choose-us {
+#why-choose-us,
+.client-feedback {
   background-color: #ffffff;
   scroll-margin-top: 4.5rem;
 }
 
-.why-choose-us .heading-main {
+.why-choose-us .heading-main,
+.growth-feedback .heading-main,
+.client-feedback .heading-main {
   font-weight: bolder;
   text-transform: uppercase;
   padding-right: 1.5rem;
@@ -225,8 +234,12 @@
 }
 
 .our-project .content-img img {
-  max-width: 770px;
+  max-width: 100%;
+  max-height: 100%;
   width: 100%;
+}
+.our-project {
+  max-height: 770px;
 }
 
 .our-project .nav {
@@ -234,11 +247,14 @@
   background: #f6f6f6;
   padding: 0;
   margin: 0;
+  height: 100%;
+  max-height: 770px;
 }
 
-.our-project .nav .nav-item{
-  padding: 0;
-  margin: 0;
+.our-project .nav .nav-item,
+.our-project .nav-link {
+  padding: 0 !important;
+  margin: 0 !important;
 }
 
 .our-project .nav-item .card,
@@ -246,53 +262,133 @@
   border: none;
   padding: 1.6rem 1.3rem;
   margin: 0;
-  
+  background-color: #f6f6f6;
+  text-align: start;
 }
 
 .our-project .nav-item .nav-link.active div {
-  background-color: #ff3147 ;
+  background-color: #ff3147;
   color: #ffffff;
 }
 
-.contact-us .modal-title{
-  color: #2D3142;
+.contact-us .modal-title {
+  color: #2d3142;
 }
-
-
 
 .contact-us-form input[type="email"],
 .contact-us-form input[type="text"] {
-    width: 100%;
-  padding-left:0% !important;
-border: none;
+  width: 100%;
+  padding-left: 0% !important;
+  border: none;
 
-    border-bottom: 1px solid #cccccc;
-    border-radius: 0;
+  border-bottom: 1px solid #cccccc;
+  border-radius: 0;
 }
-.contact-us-form label{
-  color: #6F718F;
+.contact-us-form label {
+  color: #6f718f;
   padding-left: 0% !important;
   border: none;
 }
 
-.contact-us-form .form-control:focus{
-
-box-shadow: none;
-
-
-}
-
-.contact-us-form .form-check-input{
-  border-color: #FF3366;
+.contact-us-form .form-control:focus {
   box-shadow: none;
-  border: 2px solid #FF3366;
-}
-.contact-us-form .form-check-input:checked{
-  background-color: #FF3366;
 }
 
-.contact-us-btn{
-  background-color: #FF3366 !important;
+.contact-us-form .form-check-input {
+  border-color: #ff3366;
+  box-shadow: none;
+  border: 2px solid #ff3366;
+}
+.contact-us-form .form-check-input:checked {
+  background-color: #ff3366;
+}
+
+.contact-us-btn {
+  background-color: #ff3366 !important;
   width: 100%;
-  color: #FFFFFF;
+  color: #ffffff;
+}
+
+.growth-card {
+  max-width: 270px;
+  background: #ffffff;
+  border: 0;
+  width: 270px;
+  height: 233px;
+}
+
+.growth-card img {
+  max-width: 39.3px;
+  max-height: 100%;
+}
+
+.growth-card .number {
+  font-size: 60px;
+  font-weight: 300;
+  margin: 0;
+}
+.growth-card .text {
+  /* Your Poppins font */
+  font-family: "Poppins", sans-serif;
+  font-weight: 300; /* Light */
+  font-size: 20px;
+  padding: 0;
+  margin: 0;
+}
+
+.growth-card:hover {
+  box-shadow: 3px 6px 20px #672c2c1f;
+}
+
+.feedback-box{
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+    
+    
+
+}
+.feedback-box .content{
+  flex-basis: 65%;
+ 
+
+}
+
+.content-text{
+  position: relative;
+  z-index: 999 !important;
+  font-size: 20px;
+}
+.content-text .quotemarks{
+  position: absolute;
+  top: -20px;
+  left: -10px;
+  z-index: -1;
+}
+.content .name{
+  color: var(--red);
+  font-weight: bold;
+  font-size: 20px;
+}
+.content .des{
+color: #808080;
+
+}
+
+.footer{
+
+  display: flex;
+  max-height: 310px;
+  height: 310px;
+  background-color: var(--red);
+  z-index: 0;
+align-items: center;
+justify-content: center;
+}
+
+.footer-img{
+ width: 900px;
+  
 }
