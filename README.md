@@ -92,5 +92,5 @@ Pull requests are welcome. For major changes, please open an issue first to disc
 
 ## Contact
 
-For any questions or feedback, please contact [Loordhu Jeyakumar](mailto:your-loordhujeyakumar@gmail.com).
+For any questions or feedback, please contact [Loordhu Jeyakumar](mailto:loordhujeyakumar@gmail.com).
 
